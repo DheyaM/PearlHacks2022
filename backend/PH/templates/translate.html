@@ -23,11 +23,10 @@
 
 
     async function goAddUserInfo() {
-        let namef = document.getElementById("name").value
-        let emailf = document.getElementById("email").value
-        let schoolf = document.getElementById("school").value
+        let langf = document.getElementById("lang").value
 
-        let formData = JSON.stringify({ name: namef, email: emailf, school: schoolf })
+
+        let formData = JSON.stringify({ lang: langf })
 
         console.log(formData)
 
@@ -61,7 +60,7 @@
         //     "Authorization": 'Bearer ' + token}
         // })
 
-        document.getElementById("demo").innerHTML = formData
+        document.getElementById("lang").innerHTML = formData
 
         // const username = data.username
 
