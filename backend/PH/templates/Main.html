@@ -8,9 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<script src="https://kit.fontawesome.com/9de7f781e5.js" crossorigin="anonymous"></script>
 
-	<script type="text/css" src="{{ url_for('static', filename = 'assets/css/main.css') }}"></script>
+	<script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/main.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 				<h1>Our Purpose</h1>
 				<p>Digital Resume Translator from Native Language to English. DISCLAIMER: Only compatible with .docx.
 				</p>
-				<button type="translate">TRANSLATE YOUR RESUME</button>
+				<a href="/translate"><button type="button">TRANSLATE YOUR RESUME</button></a>
 			</div>
 		</section>
 	</body>
