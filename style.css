@@ -67,11 +67,11 @@ nav img{
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: #d0e2ec;
+    color: #0d415e;
 }
 
 .description p{
-    color: #d0e2ec;
+    color: #0d415e;
     font: 14px;
 }
 
@@ -92,7 +92,7 @@ nav img{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 45px;
-    color: #d0e2ec;
+    color: #0d415e;
 }
 Body {
   font-family: Calibri, Helvetica, sans-serif;
