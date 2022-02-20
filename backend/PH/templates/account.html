@@ -7,6 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	 <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li class="active"><a href="/account">ACCOUNT INFORMATION</a></li>
+                    <li><a href="/additional">ADDITIONAL RESOURCES</a></li>
+                </ul>
+            </div>
+        </nav> 
 	<section class="py-5 my-5">
 		<div class="container">
 			<h1 class="mb-5">Account Information</h1>
@@ -56,8 +65,9 @@
 							</div>
 						</div>
 						<div>
-							<button class="btn btn-primary">Update</button>
-							<button class="btn btn-light">Cancel</button>
+							<button type="submit" class="updatebtn" onclick="window.location.href='/loggedin'"> Update</button> 
+							<button type="button" class="cancelbtn" onclick="window.location.href='/loggedin'">Cancel</button> 
+							<button type="button" class="cancelbtn" onclick="window.location.href='/'">Logout</button> 
 						</div>
 					</div>
 				</div>
