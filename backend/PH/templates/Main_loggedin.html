@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;1,300;1,500&display=swap" rel="stylesheet">
-        
-        <script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
 
-	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
-        
-    </head>
-    <body>
-       <section class="header">
-        
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;1,300;1,500&display=swap"
+        rel="stylesheet">
+
+    <script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
+
+</head>
+
+<body>
+    <section class="header">
+
         <nav>
-            <a href="index.html"><img src ="logo.png"></a>
+            <a href="/"><img src="images/logo.png"></a>
             <div class="nav-links">
                 <ul>
                     <li class="active"><a href="">HOME</a></li>
@@ -27,13 +31,18 @@
                 </ul>
             </div>
         </nav>
-        <div class ="logo"><h4>RESUME TRANSLATOR</h4></div>
-        <div class ="title"><h1>RESUME TRANSLATOR</h1></div>
-        <div class ="description">
+        <div class="logo">
+            <h4>RESUME TRANSLATOR</h4>
+        </div>
+        <div class="title">
+            <h1>RESUME TRANSLATOR</h1>
+        </div>
+        <div class="description">
             <h1>Our Purpose</h1>
-            <p>Digital Resume Translator from Native Language to English. DISCLAIMER: Only compatible with .docx.  </p>
+            <p>Digital Resume Translator from Native Language to English. DISCLAIMER: Only compatible with .docx. </p>
             <a href="/translate"><button type="button">TRANSLATE YOUR RESUME</button></a>
         </div>
     </section>
-    </body>
+</body>
+
 </html>

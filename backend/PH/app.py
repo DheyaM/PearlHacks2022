@@ -36,14 +36,24 @@ def login():
     return render_template("Login.html")
 
 
+@app.route('/loggedin')
+def loggedin():
+    return render_template("Main_loggedin.html")
+
+
 @app.route('/signup')
 def signup():
     return render_template("signup.html")
 
 
+@app.route('/account')
+def account():
+    return render_template("account.html")
+
+
 @app.route('/additional')
 def additional():
-    return jsonify(message="under construction")
+    return render_template("info.html")
 
 
 @app.route('/translate')
