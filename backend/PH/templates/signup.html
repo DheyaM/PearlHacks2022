@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Page </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="Login.html">
+    <link rel="script" href="main.js">
+
+    <script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
+</head>
+
+<body>
+    <h1> TranslateMe Registration </h1>
+    <div class="container">
+        <label>First Name : </label>
+        <input type="text" placeholder="Enter First Name" name="firstname" required>
+        <label>Last Name : </label>
+        <input type="text" placeholder="Enter Last Name" name="lastname" required>
+        <label>Username : </label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <label>Email : </label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <label>Re-enter Password : </label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit" class="loginbtn"> Register</button>
+        <!-- make signup link to signup -->
+        <button type="button" class="signinbtn"> Sign In</button>
+        <!-- make cancel link back to the home screen -->
+        <button type="button" class="cancelbtn"> Cancel</button>
+    </div>
+    </form>
+</body>
+
+</html>

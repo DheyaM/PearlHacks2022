@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+
+<script>
+    async function goSend() {
+
+        const resp = await fetch('/feel', {
+            method: "GET"
+        })
+
+
+        const data = await resp.json()
+        console.log(data.msg)
+        if (resp.status == 404) {
+            document.getElementById("demo").innerHTML = data.msg;
+            document.getElementById("result").src = ""
+        } else {
+            document.getElementById("result").src = data.url;
+        }
+
+    }
+
+
+    async function goAddUserInfo() {
+        let namef = document.getElementById("name").value
+        let emailf = document.getElementById("email").value
+        let schoolf = document.getElementById("school").value
+
+        let formData = JSON.stringify({ name: namef, email: emailf, school: schoolf })
+
+        console.log(formData)
+
+        // JSON.stringify({ email: "something@gotham.ca", password: "abc123" })
+
+        const resp = await fetch('/addDetails', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: formData
+        })
+
+        if (!resp.ok) throw Error("There was a problem in the register request")
+
+        // if (resp.status === 401) {
+        //     document.getElementById("demo").innerHTML = "Invalid credentials";
+        //     throw ("Invalid credentials")
+        // }
+        // else if (resp.status === 400) {
+        //     document.getElementById("demo").innerHTML = "Invalid email or password format";
+        //     throw ("Invalid email or password format")
+
+        // }
+        const data = await resp.json()
+
+        console.log(data)
+
+
+        // const p = await fetch('/chat', { 
+        // 	method: "GET",
+        //     headers: { "Content-Type": "application/json",
+        //     "Authorization": 'Bearer ' + token}
+        // })
+
+        document.getElementById("demo").innerHTML = formData
+
+        // const username = data.username
+
+
+        //TODO Erase the boxes
+    }</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Translate Your Resume</title>
+    <meta name="description" content="Translate your resume into a different language.">
+
+    <script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/translate.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;1,300;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+
+<body style="background-color: lightblue;">
+    <header>
+        <link rel="import" href="/Components/header.html">
+    </header>
+    <div class="title">
+        <h1>Digital Translator for Resumes</h1>
+    </div>
+    <div class="container">
+        <div class="floating-box">1. Enter the language you want to translate to</div>
+        <div class="floating-step"></div>
+        <div class="floating-box">2. Upload your resume in .docx format</div>
+        <div class="floating-step"></div>
+        <div class="floating-box">3. Review and download your resume</div>
+
+        <div id="register">
+            <h2>Details to scrub</h2>
+            <label for="lang">Enter the language you want to translate to</label><br>
+            <input type="text" id="lang" name="lang"><br><br>
+            <input type="submit" value="Submit" onclick="goAddUserInfo()">
+
+        </div>
+    </div>
+    <!-- <div class = "main"> -->
+    <!-- <div class="grid-container">
+        <div class="grid-child">
+            <div class="box">Type the language you want to enter</div>
+            <div class="box">Type the role you are aiming </div>
+            <div class="box">"Upload your resume"</div>
+        </div> -->
+    <!-- <div class="grid-child">
+        <form id="file_form" action="processUpload" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="url">File</label></td>
+                    <td><input id="file_select" type="file" name="file" value=""></td>
+                </tr>
+            </table>
+    </div> -->
+    <div class="grid-child">
+        <form id="file_form" action="processUpload" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="url">File</label></td>
+                    <td><input id="file_select" type="file" name="file" value=""></td>
+                </tr>
+            </table>
+
+
+            <br>
+            <input id="upload_button" type="submit" value="Upload now">
+        </form>
+
+</body>
+
+</html>
