@@ -9,6 +9,16 @@
         <link rel="script" href="main.js">
     </head>  
     <body>  
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Main.html">HOME</a></li>
+                    <li class="active"><a href="Login.html">LOGIN/REGISTRATION</a></li>
+                    <li><a href="">ADDITIONAL RESOURCES</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>  
         <h1> TranslateMe Registration </h1>
             <div class="container"> 
                 <label>First Name: </label> 
@@ -23,7 +33,7 @@
                 <input type="password" placeholder="Enter Password" name="password" required>
                 <label>Re-enter Password: </label> 
                 <input type="password" placeholder="Enter Password" name="password" required>
-                <button type="submit" class="loginbtn"> Register</button> 
+                <button type="submit" class="loginbtn"onclick="window.location.href='account.html'"> Register</button> 
                 <button type="button" class="signinbtn" onclick="window.location.href='Login.html'"> Sign In</button>
                 <button type="button" class="cancelbtn" onclick="window.location.href='Main.html'">Cancel</button> 
             </div> 
