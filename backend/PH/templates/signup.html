@@ -7,7 +7,6 @@
     <title> Login Page </title>
     <link rel="stylesheet" href="style.css">
     <link rel="script" href="Login.html">
-    <link rel="script" href="main.js">
 
     <script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
 
@@ -15,6 +14,15 @@
 </head>
 
 <body>
+           <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li class="active"><a href="/login">LOGIN/REGISTRATION</a></li>
+                    <li><a href="/additional">ADDITIONAL RESOURCES</a></li>
+                </ul>
+            </div>
+        </nav>  
     <h1> TranslateMe Registration </h1>
     <div class="container">
         <label>First Name : </label>
@@ -29,11 +37,9 @@
         <input type="password" placeholder="Enter Password" name="password" required>
         <label>Re-enter Password : </label>
         <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit" class="loginbtn"> Register</button>
-        <!-- make signup link to signup -->
-        <button type="button" class="signinbtn"> Sign In</button>
-        <!-- make cancel link back to the home screen -->
-        <button type="button" class="cancelbtn"> Cancel</button>
+                <button type="submit" class="loginbtn"onclick="window.location.href='/loggedin'"> Register</button> 
+                <button type="button" class="signinbtn" onclick="window.location.href='login'"> Sign In</button>
+                <button type="button" class="cancelbtn" onclick="window.location.href='/'">Cancel</button> 
     </div>
     </form>
 </body>
