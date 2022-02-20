@@ -158,8 +158,13 @@ button {
   .loginbtn {
     color: #023047;
   }    
+
+  .updatebtn {
+    color: #023047;
+  }    
    
  .container { 
         padding: 25px; 
         background-color: #c0d6df;
     } 
+
