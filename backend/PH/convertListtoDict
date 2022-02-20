@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import pickle
 
 languages = [
     ('aa', 'Afar'),
@@ -207,3 +208,7 @@ languages = [
 ]
 
 a_dictionary = dict(languages)
+print(a_dictionary)
+f = open("dicts.txt","w")
+f.write(str(a_dictionary))
+f.close()
