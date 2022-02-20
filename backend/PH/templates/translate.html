@@ -1,6 +1,10 @@
 <!doctype html>
 
 <html lang="en">
+    
+<script type="text/css" src="{{ url_for('static', filename = 'assets/css/style.css') }}"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
 
 <script>
     async function goSend() {
@@ -89,6 +93,15 @@
 
 
 <body style="background-color: lightblue;">
+      <nav>
+          <div class="nav-links">
+                <ul>
+                    <li><a href="/login">LOGIN/REGISTRATION</a></li>
+                    <li class="active"><a href="/">HOME</a></li>
+                    <li><a href="/additional">ADDITIONAL RESOURCES</a></li>
+                </ul>
+            </div>
+        </nav>  
     <header>
         <link rel="import" href="/Components/header.html">
     </header>
