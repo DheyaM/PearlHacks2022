@@ -15,20 +15,26 @@
 </head>
 
 <body>
-    <h1> TranslateMe Login </h1>
-    <div class="container">
-        <label>Username : </label>
-        <input type="text" placeholder="Enter Username" name="username" required>
-        <label>Password : </label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit" class="loginbtn"> Login</button>
-        <!-- make signup link to signup -->
-        <button type="button" class="signupbtn"> Sign Up</button>
-        <!-- make cancel link back to the home screen -->
-        <button type="button" class="cancelbtn"> Cancel</button>
-        <button type="button" class="resetbtn"> Reset Password</button>
-    </div>
-    </form>
-</body>
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Main.html">HOME</a></li>
+                    <li class="active"><a href="Login.html">LOGIN/REGISTRATION</a></li>
+                    <li><a href="info.html">ADDITIONAL RESOURCES</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>  
+        <h1> TranslateMe Login </h1>
+            <div class="container"> 
+                <label>Username: </label> 
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <label>Password: </label> 
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <button type="submit" class="loginbtn" onclick="window.location.href='Main_loggedin.html'"> Login</button> 
+                <button type="button" class="signupbtn" onclick="window.location.href='signup.html'">Sign Up</button>
+                <button type="button" class="cancelbtn" onclick="window.location.href='Main.html'">Cancel</button> 
+            </div> 
+    </body>
 
 </html>
