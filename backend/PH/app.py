@@ -54,7 +54,8 @@ def translate_two():
 @app.route('/addDetails', methods=['POST'])
 def addDetails():
     if request.is_json:
-        lang['from'] = request.json['lang']
+        lang['from'] = request.json['langfro']
+        lang['to'] = request.json['langto']
 
     return jsonify({"lang": lang['from']})
 
@@ -128,6 +129,10 @@ def translate_text(text, project_id="metal-sorter-341818"):
     location = "global"
 
     parent = f"projects/{project_id}/locations/{location}"
+    to = lang['to']
+    print(to)
+    fromlang = lang['from']
+    print(fromlang)
 
     # Translate text from English to French
     # Detail on supported types can be found here:
@@ -137,8 +142,8 @@ def translate_text(text, project_id="metal-sorter-341818"):
             "parent": parent,
             "contents": [text],
             "mime_type": "text/plain",  # mime types: text/plain, text/html
-            "source_language_code": "es",
-            "target_language_code": "en",
+            "source_language_code": fromlang,
+            "target_language_code": to,
         }
     )
 
@@ -154,7 +159,8 @@ def find_replace(paragraph_keyword, draft_keyword, paragraph, style, isBold):
         paragraph.text = paragraph.text.replace(
             paragraph_keyword, draft_keyword)
         paragraph.style = style
-        paragraph.style.font.bold = True
+        if(isBold):
+            paragraph.style.font.bold = True
 
 
 def find_replace_table(paragraph_keyword, draft_keyword, cell):

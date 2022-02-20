@@ -23,10 +23,11 @@
 
 
     async function goAddUserInfo() {
-        let langf = document.getElementById("lang").value
+        let langtof = document.getElementById("langto").value
+        let langfrof = document.getElementById("langfro").value
 
 
-        let formData = JSON.stringify({ lang: langf })
+        let formData = JSON.stringify({ langto: langtof, langfro: langfrof })
 
         console.log(formData)
 
@@ -60,7 +61,7 @@
         //     "Authorization": 'Bearer ' + token}
         // })
 
-        document.getElementById("lang").innerHTML = formData
+        document.getElementById("langdemo").innerHTML = formData
 
         // const username = data.username
 
@@ -102,12 +103,19 @@
         <div class="floating-box">3. Review and download your resume</div>
 
         <div id="register">
-            <h2>Details to scrub</h2>
-            <label for="lang">Enter the language you want to translate to</label><br>
-            <input type="text" id="lang" name="lang"><br><br>
+            <!-- <h2>Details to scrub</h2> -->
+            <p>Please enter the language code of the language you want to translate</p>
+            <p>see: <a href="https://cloud.google.com/translate/docs/languages">language support </a>for the full list
+                of
+                codes</p>
+            <label for="langto">Enter the language you want to translate to</label><br>
+            <input type="text" id="langto" name="langto"><br><br>
+            <label for="langfro">Enter the language you want to translate from</label><br>
+            <input type="text" id="langfro" name="langfro"><br><br>
             <input type="submit" value="Submit" onclick="goAddUserInfo()">
 
         </div>
+        <div id="langdemo"></div>
     </div>
     <!-- <div class = "main"> -->
     <!-- <div class="grid-container">
