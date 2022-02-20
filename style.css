@@ -35,7 +35,7 @@ nav img{
     position: relative;
 }
 .nav-links ul li a{
-    color: #d0e2ec;
+    color: #a6e1fa;
     text-decoration: none;
     font: 12px; 
     transition: 0.6s ease;
@@ -94,6 +94,11 @@ nav img{
     font-size: 45px;
     color: #d0e2ec;
 }
+
+h3 {
+  padding-bottom: 20px;
+}
+
 Body {
   font-family: Calibri, Helvetica, sans-serif;
   background-color: #dbe9ee;
@@ -167,4 +172,3 @@ button {
         padding: 25px; 
         background-color: #c0d6df;
     } 
-
